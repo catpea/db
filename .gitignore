@@ -1,0 +1,22 @@
+dist
+
+# Utility and Helper Repositories
+bin
+templates
+
+# Target Repositories
+homepage
+website
+
+# Content Repositories
+furkies-purrkies
+westland-warrior
+
+# Ignore YouTube Video Files (video version of the mp3 files)
+*.mp4
+
+# Local marker created after installer runs, thus can't be in the repository.
+.INSTALLED
+
+# Standard Things
+node_modules
