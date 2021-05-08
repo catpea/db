@@ -66,7 +66,7 @@ else
     exit;
 fi
 
-if [[ -z $(git status -s) ]]; then
+if [[ -z $(cd templates; git status -s) ]]; then
     echo "[OK] record templates are in sync"
 else
     echo "[NO] record templates have uncommited changes"

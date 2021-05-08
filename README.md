@@ -20,7 +20,7 @@ $ ssh-add ~/.ssh/id_ed25519
 $ xclip -selection clipboard < ~/.ssh/id_ed25519.pub # or just cat ~/.ssh/id_ed25519.pub (as it is short)
 
 ```
-Add the key Under Settings > SSH and GPG keys. 
+Add the key Under Settings > SSH and GPG keys.
 
 ## Note
 
@@ -35,10 +35,11 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 - [x] Install catpea/db on raspberry pi
 
 - [ ] Once the installer and build work, run publish to catpea/homepage (homepage is staging)
+- [ ] re-run bowel to keep homepage updated with latest posts, make sure bowel chugs-along.
 
-- [] re-run bowel to keep homepage updated with latest posts.
-- [ ] Change template slightly, simplify it.
+- [ ] Simplify the Bootstrap Template, please remember that Flex layout has problems.
 - [ ] When ready, add catpea/website to the system and actually publish to the live webstite.
+
 - [ ] Delete server, poetry, warrior, and homepage (staging) as not to upset guthub.
 
 [Eternia]: https://www.npmjs.com/package/eternia
