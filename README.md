@@ -25,7 +25,7 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 - [ ] re-run bowel to keep homepage updated with latest posts.
 - [ ] Change template slightly, simplify it.
 - [ ] When ready, add catpea/website to the system and actually publish to the live webstite.
-
+- [ ] Delete server, poetry, warrior, and homepage (staging) as not to upset guthub.
 
 
 [Eternia]: https://www.npmjs.com/package/eternia

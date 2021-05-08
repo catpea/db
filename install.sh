@@ -16,7 +16,11 @@ cd templates;
 npm i;
 cd -;
 
-echo "Installing Eternia"
-npm -g i eternia;
+if ! command -v eternia &> /dev/null
+then
+  echo "Installing Eternia"
+  npm -g i eternia;
+fi
+
 
 touch .INSTALLED

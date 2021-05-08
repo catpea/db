@@ -18,3 +18,10 @@ git add .;
 git commit -m 'New Template Revisions';
 git push;
 cd -
+
+cd homepage;
+git pull;
+git add .;
+git commit -m 'New Homepage Revision';
+git push;
+cd -
