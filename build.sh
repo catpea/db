@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo build is disabled while testing, decompile a fresh version, and fill furkies-purrkies and westland-warrior repos with proper content.
-# eternia build furkies-purrkies
+eternia build furkies-purrkies
 
 # Multiple Servers Can Be Configured Here
 
