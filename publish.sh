@@ -5,23 +5,34 @@
 
 # Manual (System Level)
 
-cd bin;
-git pull;
-git add .;
-git commit -m 'New Bin Revisions';
-git push;
-cd -
+if test -d ./bin; then
+  cd bin;
+  git pull;
+  git add .;
+  git commit -m 'New Bin Revisions';
+  git push;
+  cd -
+fi
 
-cd templates;
-git pull;
-git add .;
-git commit -m 'New Template Revisions';
-git push;
-cd -
+if test -d ./templates; then
+  cd templates;
+  git pull;
+  git add .;
+  git commit -m 'New Template Revisions';
+  git push;
+  cd -
+fi
 
-cd homepage;
+if test -d ./homepage; then
+  cd homepage;
+  git pull;
+  git add .;
+  git commit -m 'New Homepage Revision';
+  git push;
+  cd -
+fi
+
 git pull;
 git add .;
-git commit -m 'New Homepage Revision';
+git commit -m 'New Database Revision';
 git push;
-cd -

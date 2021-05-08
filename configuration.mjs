@@ -44,6 +44,7 @@ export default {
       },
 
       transformers: [
+        { name: "ensureDirs", options: {} },
         { name: "verifyIntegrity", options: {} },
         { name: "initializeRecord", options: {} },
         { name: "processYaml", options: {} },
@@ -162,6 +163,7 @@ export default {
       },
 
       transformers: [
+        { name: "ensureDirs", options: {} },
         { name: "verifyIntegrity", options: {} },
         { name: "initializeRecord", options: {} },
         { name: "processYaml", options: {} },
