@@ -2,6 +2,7 @@
 
 if test -f .INSTALLED; then
   echo "System Nominal (Already installed, .INSTALLED exists)";
+  exit;
 fi
 
 echo "Cloning Bin Directory"
@@ -21,6 +22,5 @@ then
   echo "Installing Eternia"
   npm -g i eternia;
 fi
-
 
 touch .INSTALLED

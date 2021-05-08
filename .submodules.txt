@@ -1,9 +1,8 @@
 # ALERT! when adding repositories to this file remember to add them to .gitignore as well.
 
-# Publish Targets
-git@github.com:catpea/homepage.git
-# git@github.com:catpea/website.git
-
 # Data Sources
 git@github.com:catpea/furkies-purrkies.git
 git@github.com:catpea/westland-warrior.git
+
+# Publish Targets
+# git@github.com:catpea/website.git
