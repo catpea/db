@@ -1,9 +1,31 @@
 export default {
   common: {
-    website: 'Cat Pea University',
-    tagline: 'Home of Furkies Purrkies and Westland Warrior',
-    author: "catpea",
+    author: "catpea <https://catpea.com>",
   },
+
+  task: [
+    {
+      name: 'catpea.com',
+      configuration: {
+        website: 'Cat Pea University',
+        tagline: 'Home of Furkies Purrkies and Westland Warrior',
+      },
+      dependencies: [
+        'westland-warrior',
+        'furkies-purrkies'
+      ]
+    },
+    {
+      name: 'westland-warrior',
+      configuration: {
+        website: 'Westland Warrior',
+        tagline: 'Growing All The Way Up, Until We Become Great Beings',
+      },
+      dependencies: [
+        'westland-warrior'
+      ]
+    },
+  ],
 
   project: [
     {
@@ -89,10 +111,6 @@ export default {
         { directory: "dist/westland-warrior/audio", mountpoint: "/audio" },
       ],
     },
-
-
-
-
 
     {
       format: "v4",
