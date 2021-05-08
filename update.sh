@@ -25,4 +25,4 @@ fi
 
 git pull;
 
-npm -g update eternia;
+# npm -g update eternia;
