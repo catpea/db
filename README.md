@@ -41,12 +41,17 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 - [x] re-run bowel to keep homepage updated with latest posts, make sure bowel chugs-along.
 - [x] give the website proper title, currently the dominant book is showing
 
-- [ ] ADD UPGRADE MESSAGE, simplify the Bootstrap Template, please remember that Flex layout has problems.
+
+- [ ] WEBSITE WORK ADD UPGRADE MESSAGE, simplify the Bootstrap Template, please remember that Flex layout has problems.
+
 
 - [ ] Regression: Faux description text in warrior is doubled
 - [ ] Regression: Images are not showing all there is... but it looks better!
 - [ ] When ready, add catpea/website to the system and actually publish to the live webstite.
-- [ ] Delete server, poetry, warrior, and homepage (staging) as not to upset guthub.
+
+
 - [ ] Add New Book: Developer Cookbook
+- [ ] Archive poetry and warrior once everything is operational
+- [ ] Delete server
 
 [Eternia]: https://www.npmjs.com/package/eternia
