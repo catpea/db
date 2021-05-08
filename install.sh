@@ -14,13 +14,15 @@ echo "Downloading External Submodules"
 echo "Installing Templates"
 git clone git@github.com:catpea/templates.git
 cd templates;
-npm i;
+npm install;
 cd -;
 
 if ! command -v eternia &> /dev/null
 then
   echo "Installing Eternia"
+  cd /tmp
   npm -g i eternia;
+  cd -
 fi
 
 touch .INSTALLED

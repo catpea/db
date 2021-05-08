@@ -1,5 +1,7 @@
 export default {
   common: {
+    website: 'Cat Pea University',
+    tagline: 'Home of Furkies Purrkies and Westland Warrior',
     author: "catpea",
   },
 

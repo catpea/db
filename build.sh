@@ -9,4 +9,5 @@ if test -d ./website; then
   echo catpea.com > ./website/docs/CNAME
 fi
 
-echo "execute ./publish.sh"
+echo "Review website: hs -o -c-1 ./dist/furkies-purrkies/wwwroot/"
+echo "Publish website: ./publish.sh"

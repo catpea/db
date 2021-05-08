@@ -3,6 +3,10 @@ Content Database Root
 
 This is a sample deployment system used in the development of [Eternia]
 
+## IMPORTANT!
+
+During upgrade to v3 a temporary import.sh script is placed in ./db/ use it to sync v2 and v3.
+
 ## Scripts
 
 install.sh build.sh publish.sh and test.sh are the primary control scripts for this system, a bin directory contains some flexible sub-programs.
@@ -33,13 +37,16 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 - [x] fill catpea/westland-warrior and catpea/furkies-purrkies with real content
 - [x] run install.sh and update it so that it works, consider testing for nodejs in the installer and exit, same for imagemagick.
 - [x] Install catpea/db on raspberry pi
+- [x] Once the installer and build work, run publish to catpea/homepage (homepage is staging)
+- [x] re-run bowel to keep homepage updated with latest posts, make sure bowel chugs-along.
+- [x] give the website proper title, currently the dominant book is showing
 
-- [ ] Once the installer and build work, run publish to catpea/homepage (homepage is staging)
-- [ ] re-run bowel to keep homepage updated with latest posts, make sure bowel chugs-along.
+- [ ] ADD UPGRADE MESSAGE, simplify the Bootstrap Template, please remember that Flex layout has problems.
 
-- [ ] Simplify the Bootstrap Template, please remember that Flex layout has problems.
+- [ ] Regression: Faux description text in warrior is doubled
+- [ ] Regression: Images are not showing all there is... but it looks better!
 - [ ] When ready, add catpea/website to the system and actually publish to the live webstite.
-
 - [ ] Delete server, poetry, warrior, and homepage (staging) as not to upset guthub.
+- [ ] Add New Book: Developer Cookbook
 
 [Eternia]: https://www.npmjs.com/package/eternia
