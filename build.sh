@@ -3,6 +3,7 @@
 eternia build catpea.com
 if test -d ./website; then
   mkdir -p ./website/docs
+  echo "Copying data into ./website/docs"
   rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./website/docs
   echo catpea.com > ./website/docs/CNAME
 fi
@@ -10,6 +11,7 @@ fi
 eternia build westland-warrior
 if test -d ./warrior; then
   mkdir -p ./warrior/docs
+  echo "Copying data into ./warrior/docs"
   rsync -qav --progress ./dist/westland-warrior/wwwroot/ ./warrior/docs
 fi
 

@@ -35,15 +35,28 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 ## TODO
 
 - [ ] Run bowel to synchronize data
+
 - [ ] Activate website in .submodules (test but don't push)
 - [ ] Activate warrior in .submodules (test but don't push)
+
+- [ ] Multihosting Review
+  - [ ] https://vercel.com
+  - [ ] https://surge.sh
+  - [ ] https://cloudflare.com
+  - [ ] https://www.netlify.com
+  - [ ] https://about.gitlab.com/stages-devops-lifecycle/pages/
+
 - [ ] When ready, add catpea/website and westland-warrior/warrior to the system and actually publish to the live webstite.
+
 - [ ] Run upstream-sync execution on warrior user
+
 - [ ] Setup automated upstream-sync execution on warrior user
+
 - [ ] Switch to workstation
 
 ### Nice To Have
 
+- [ ] Add Multiple Web Theme Support
 - [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
 - [ ] Custom Recorder, on per stanza level that will allow text rendering into videos?
 - [ ] Cache Buster - Forces Record Recalculation
