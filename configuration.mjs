@@ -7,8 +7,7 @@ export default {
     {
       name: 'catpea.com',
       configuration: {
-        website: 'Cat Pea University',
-        tagline: 'Home of Furkies Purrkies and Westland Warrior',
+        // this will override settings for all dependencies in the task
       },
       dependencies: [
         'westland-warrior',
@@ -18,8 +17,7 @@ export default {
     {
       name: 'westland-warrior',
       configuration: {
-        website: 'Westland Warrior',
-        tagline: 'Growing All The Way Up, Until We Become Great Beings',
+        // this will override settings for all dependencies in the task
       },
       dependencies: [
         'westland-warrior'
@@ -34,6 +32,8 @@ export default {
       title: "Westland Warrior",
       subtitle: "A Path To Greatness",
       description: "A small video book about the twisty little passages of growing up.",
+      website: 'Westland Warrior',
+      tagline: 'Growing All The Way Up, Until We Become Great Beings',
       icon: "collection-play",
       order: "latest",
 
@@ -118,6 +118,8 @@ export default {
       title: "Furkies Purrkies",
       subtitle: "Anthology of Inspirational Rhyme",
       description: "Just another dang old Audio Book about wisdom and growing up.",
+      website: 'Cat Pea University',
+      tagline: 'Home of Furkies Purrkies and Westland Warrior',
       icon: "earbuds",
       order: "latest",
 
