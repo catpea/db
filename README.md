@@ -34,12 +34,17 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 
 ## TODO
 
+- [ ] Potential CNAME problems, needs to be added on per host basis
 - [ ] Run ./import.sh; eternia build catpea.com; ./publish to keep db up to date.
 - [ ] Publish Simple Mirrors: dist/furkies-purrkies and dist/furkies-purrkies somewhere
-
 - [ ] Activate website in .submodules (test but don't push)
 - [ ] Activate warrior in .submodules (test but don't push)
-
+- [ ] When ready, add catpea/website and westland-warrior/warrior to the system and actually publish to the live webstite.
+- [ ] Run upstream-sync execution on warrior user
+  - [ ] Setup automated upstream-sync execution on warrior user
+- [ ] Switch to workstation
+- [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
+- [ ] Regression: Thumbnail cover images are too zoomed in , Images are not showing all there is...
 - [ ] Multihosting Review
   - [ ] https://vercel.com
   - [ ] https://surge.sh
@@ -47,39 +52,6 @@ Test Version Publishes to: https://catpea.github.io/homepage/
   - [ ] https://www.netlify.com
   - [ ] https://about.gitlab.com/stages-devops-lifecycle/pages/
 
-- [ ] When ready, add catpea/website and westland-warrior/warrior to the system and actually publish to the live webstite.
-
-- [ ] Run upstream-sync execution on warrior user
-  - [ ] Setup automated upstream-sync execution on warrior user
-- [ ] Switch to workstation
-- [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
-- [ ] Regression: Thumbnail cover images are too zoomed in , Images are not showing all there is...
-
-### Nice To Have
-
-- [ ] Add New Book: Developer Cookbook - Introduce the software tutorial Book (add new book)
-
-
-- [ ] Add Multiple Web Theme Support
-- [ ] Custom Recorder, on per stanza level that will allow text rendering into videos?
-- [ ] Cache Buster - Forces Record Recalculation
-
-
-- [ ] Archive poetry as it has been replaced by db&furkies-purrkies once everything is operational
-- [ ] Delete server as it is no longer used db publishes directly to website
-
-### Items To Consider
-
-- [ ] compiler/convert-audio-to-video is just touching files, it is not creating the videos, fix it when this program goes live
-- [ ] check for indexes that point to removed record-directories and remove them (put use the trash bin, not rimraf)
-- [ ] add a file checker to weed out strange files
-- [ ] Add link to youtube video? or should thic be only youtube -> website?
-
-### Bonus Challenges
-
-- [ ] Setup Audio Book With Amazon, Gutenberg, or Librivox, add Cover Image to mp4 files as cover image.
-- [ ] Fast Audiobook Compiler, upload to google docs via node google api.
-- [ ] AUtomate YouTube uploads via API
 
 ## DONE
 
@@ -148,5 +120,27 @@ Test Version Publishes to: https://catpea.github.io/homepage/
 - [x] .attachments, respect .attachments in index.json... add attachments to bowel/import, considering converting bowel to de-compiler...
 - [x] rename index.json/.dependencies to index.json/data[0].attachements
 - [x] put bowel in compiler mode, remove content.html in favor of html.html pattern.
+
+### Nice To Have
+
+- [ ] Add New Book: Developer Cookbook - Introduce the software tutorial Book (add new book)
+- [ ] Add Multiple Web Theme Support
+- [ ] Custom Recorder, on per stanza level that will allow text rendering into videos?
+- [ ] Cache Buster - Forces Record Recalculation
+- [ ] Archive poetry as it has been replaced by db&furkies-purrkies once everything is operational
+- [ ] Delete server as it is no longer used db publishes directly to website
+
+### Items To Consider
+
+- [ ] compiler/convert-audio-to-video is just touching files, it is not creating the videos, fix it when this program goes live
+- [ ] check for indexes that point to removed record-directories and remove them (put use the trash bin, not rimraf)
+- [ ] add a file checker to weed out strange files
+- [ ] Add link to youtube video? or should thic be only youtube -> website?
+
+### Bonus Challenges
+
+- [ ] Setup Audio Book With Amazon, Gutenberg, or Librivox, add Cover Image to mp4 files as cover image.
+- [ ] Fast Audiobook Compiler, upload to google docs via node google api.
+- [ ] AUtomate YouTube uploads via API
 
 [Eternia]: https://www.npmjs.com/package/eternia
