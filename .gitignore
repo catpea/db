@@ -7,6 +7,7 @@ templates
 # Target Repositories
 homepage
 website
+warrior
 
 # Content Repositories
 furkies-purrkies
@@ -20,6 +21,3 @@ westland-warrior
 
 # Standard Things
 node_modules
-
-# Temporary things used on the primary development workstation during the switch-over
-import.sh
