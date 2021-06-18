@@ -7,7 +7,7 @@ export default {
     {
       name: 'catpea.com',
       configuration: {
-        // this will override settings for all dependencies in the task
+        // this will override settings for all dependencies in the task, changing the website name here will change it for all sub projects, be careful.
       },
       dependencies: [
         'westland-warrior',
@@ -17,7 +17,7 @@ export default {
     {
       name: 'westland-warrior',
       configuration: {
-        // this will override settings for all dependencies in the task
+        // this will override settings for all dependencies in the task, changing the website name here will change it for all sub projects, be careful.
       },
       dependencies: [
         'westland-warrior'
@@ -41,17 +41,17 @@ export default {
         {
           name: "Source Code",
           icon: "link-45deg",
-          href: "https://github.com/westland-valhalla/warrior",
+          href: "https://github.com/catpea/westland-warrior",
         },
-        {
-          name: "Mirror",
-          icon: "link-45deg",
-          href: "https://westland-valhalla.github.io/warrior/",
-        },
+        // {
+        //   name: "Mirror",
+        //   icon: "link-45deg",
+        //   href: "https://westland-valhalla.github.io/warrior/",
+        // },
         {
           name: "Bugs",
           icon: "link-45deg",
-          href: "https://github.com/westland-valhalla/warrior/issues",
+          href: "https://github.com/catpea/westland-warrior/issues",
         },
       ],
 
@@ -128,17 +128,17 @@ export default {
         {
           name: "Source Code",
           icon: "link-45deg",
-          href: "https://github.com/catpea/poetry",
+          href: "https://github.com/catpea/furkies-purrkies",
         },
-        {
-          name: "Mirror",
-          icon: "link-45deg",
-          href: "https://catpea.github.io/poetry/",
-        },
+        // {
+        //   name: "Mirror",
+        //   icon: "link-45deg",
+        //   href: "https://catpea.github.io/poetry/",
+        // },
         {
           name: "Bugs",
           icon: "link-45deg",
-          href: "https://github.com/catpea/poetry/issues",
+          href: "https://github.com/catpea/furkies-purrkies/issues",
         },
         {
           name: "YouTube",

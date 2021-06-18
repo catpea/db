@@ -15,6 +15,10 @@ if test -d ./warrior; then
   rsync -qav --progress ./dist/westland-warrior/wwwroot/ ./warrior/docs
 fi
 
-echo "Review website: hs -o -c-1 ./dist/furkies-purrkies/wwwroot/"
-echo "Review website: hs -o -c-1 ./dist/westland-warrior/wwwroot/"
-echo "Publish website: ./publish.sh"
+# echo "Review website: hs -o -c-1 ./dist/furkies-purrkies/wwwroot/"
+# echo "Review website: hs -o -c-1 ./dist/westland-warrior/wwwroot/"
+echo "Review website: hs -o -c-1 ./warrior/docs"
+echo "Review website: hs -o -c-1 ./website/docs"
+echo "Test for broken links: blc http://127.0.0.1:8081/ -roe #(NOTE: requires npm install broken-link-checker -g)"
+
+echo "Publish website: ./publish.sh #(NOTE: this only publishes what is in sub modules)"
