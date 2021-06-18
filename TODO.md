@@ -1,22 +1,14 @@
 # TODO
 
-- [ ] Potential CNAME problems, needs to be added on per host basis
 - [ ] Run ./import.sh; eternia build catpea.com; ./publish to keep db up to date.
-- [ ] Publish Simple Mirrors: dist/furkies-purrkies and dist/furkies-purrkies somewhere
-- [ ] Activate website in .submodules (test but don't push)
-- [ ] Activate warrior in .submodules (test but don't push)
-- [ ] When ready, add catpea/website and westland-warrior/warrior to the system and actually publish to the live webstite.
 - [ ] Run upstream-sync execution on warrior user
-  - [ ] Setup automated upstream-sync execution on warrior user
-- [ ] Switch to workstation
 - [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
-- [ ] Regression: Thumbnail cover images are too zoomed in , Images are not showing all there is...
-- [ ] Multihosting Review
-  - [ ] https://vercel.com
-  - [ ] https://surge.sh
-  - [ ] https://cloudflare.com
-  - [ ] https://www.netlify.com
-  - [ ] https://about.gitlab.com/stages-devops-lifecycle/pages/
+- [ ] Switch to workstation
+
+## Future
+
+- [ ] Publish Simple Mirrors: dist/furkies-purrkies and dist/furkies-purrkies somewhere
+- [ ] Regression: Thumbnail cover images are too zoomed in , Images are not showing all there is... (WILL IGNORE)
 - [ ] Add New Book: Developer Cookbook - Introduce the software tutorial Book (add new book)
 - [ ] Add Multiple Web Theme Support
 - [ ] Custom Recorder, on per stanza level that will allow text rendering into videos?
@@ -30,9 +22,16 @@
 - [ ] Setup Audio Book With Amazon, Gutenberg, or Librivox, add Cover Image to mp4 files as cover image.
 - [ ] Fast Audiobook Compiler, upload to google docs via node google api.
 - [ ] AUtomate YouTube uploads via API
+- [ ] Multihosting Review
+  - [ ] https://vercel.com
+  - [ ] https://surge.sh
+  - [ ] https://cloudflare.com
+  - [ ] https://www.netlify.com
+  - [ ] https://about.gitlab.com/stages-devops-lifecycle/pages/
 
 ## DONE
 
+- [x] Potential CNAME problems, needs to be added on per host basis
 - [x] Add Bin
 - [x] WEBSITE WORK ADD UPGRADE ALERT MESSAGE, simplify the Bootstrap Template, please remember that Flex layout has problems.
 - [x] use bowel to dump the latest format of westland warrior and furkies purkies
