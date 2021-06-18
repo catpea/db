@@ -4,6 +4,10 @@
 - [ ] Run upstream-sync execution on warrior user
 - [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
 - [ ] Switch to workstation
+- [ ] compiler/convert-audio-to-video is just touching files, it is not creating the videos, fix it when this program goes live
+- [ ] Archive server as it is no longer used db publishes directly to website
+- [ ] Archive poetry as the data is now store in furkies-purkies
+- [ ] If not deleted yet consider Archiving homepage as it is no longer needed.
 
 ## Future
 
@@ -14,8 +18,6 @@
 - [ ] Custom Recorder, on per stanza level that will allow text rendering into videos?
 - [ ] Cache Buster - Forces Record Recalculation
 - [ ] Archive poetry as it has been replaced by db&furkies-purrkies once everything is operational
-- [ ] Delete server as it is no longer used db publishes directly to website
-- [ ] compiler/convert-audio-to-video is just touching files, it is not creating the videos, fix it when this program goes live
 - [ ] check for indexes that point to removed record-directories and remove them (put use the trash bin, not rimraf)
 - [ ] add a file checker to weed out strange files
 - [ ] Add link to youtube video? or should thic be only youtube -> website?
