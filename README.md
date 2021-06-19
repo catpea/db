@@ -19,16 +19,26 @@ blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 
 ```
 
-Optionally, to create HTML heavy content in furkies-purrkies:
+## Adding A New Chapter To Furkies Purrkies
 
-- eternia create furkies-purrkies html # to create html record.
+```shell
 
-Publishing:
+eternia create furkies-purrkies # add poem in the new markdown format
+eternia build catpea.com # build the catpea website
+hs --port 7467 -o -c-1 ./website/docs # npm -g i http-server
+blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 
-1. ./import.sh
+```
+
+Optionally, to create HTML heavy content in furkies-purrkies ```eternia create furkies-purrkies html``` to create html record.
+
+
+## Publishing:
+
+1. ./import.sh # warning wipes indexes
 2. eternia build catpea.com
-3. ./system-publish.sh
-4. ./publish.sh
+3. ./system-publish.sh # publish changes to system
+4. ./publish.sh # publish content
 
 ## Testing
 
