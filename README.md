@@ -1,9 +1,6 @@
-# db
-Content Database Root
+# Usage
 
-## Usage
-
-Creating new records:
+## Creating new records:
 
 - eternia create furkies-purrkies [md] # to create markdown record.
 - eternia create --name "The Philosopher" westland-warrior # to create a new yaml record.
@@ -35,10 +32,14 @@ Optionally, to create HTML heavy content in furkies-purrkies ```eternia create f
 
 ## Publishing:
 
-1. ./import.sh # warning wipes indexes
-2. eternia build catpea.com
-3. ./system-publish.sh # publish changes to system
-4. ./publish.sh # publish content
+```shell
+
+./import.sh # warning wipes indexes
+eternia build catpea.com
+./system-publish.sh # publish changes to system
+./publish.sh # publish content
+
+```
 
 ## Testing
 
