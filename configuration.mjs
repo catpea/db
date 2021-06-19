@@ -1,4 +1,5 @@
 export default {
+
   common: {
     author: "catpea <https://catpea.com>",
   },
@@ -28,6 +29,7 @@ export default {
   project: [
     {
       format: "v4",
+      theme: 'default',
       name: "westland-warrior",
       title: "Westland Warrior",
       subtitle: "A Path To Greatness",
@@ -114,6 +116,7 @@ export default {
 
     {
       format: "v4",
+      theme: 'default',
       name: "furkies-purrkies",
       title: "Furkies Purrkies",
       subtitle: "Anthology of Inspirational Rhyme",

@@ -11,6 +11,9 @@ git clone git@github.com:catpea/bin.git
 echo "Downloading External Submodules"
 ./bin/download-submodules/index.sh
 
+echo "Installing Themes"
+git clone git@github.com:catpea/themes.git
+
 echo "Installing Templates"
 git clone git@github.com:catpea/templates.git
 cd templates;

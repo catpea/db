@@ -4,13 +4,13 @@
 - [ ] Run upstream-sync execution on warrior user
 - [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
 - [ ] Switch to workstation
-- [ ] compiler/convert-audio-to-video is just touching files, it is not creating the videos, fix it when this program goes live
-- [ ] Archive server as it is no longer used db publishes directly to website
-- [ ] Archive poetry as the data is now store in furkies-purkies
-- [ ] If not deleted yet consider Archiving homepage as it is no longer needed.
+- [ ] GIT Archive server as it is no longer used db publishes directly to website
+- [ ] GIT Archive poetry as the data is now store in furkies-purkies
+- [ ] If not deleted yet consider GIT Archiving homepage as it is no longer needed.
 
 ## Future
-
+- [ ] process-yaml, haha! is not supposed to be so tightly packed, there are like 5 modules in there.
+- [ ] Some of the tasks like to print are not needed in westland-warrior remove them from configuration.
 - [ ] Publish Simple Mirrors: dist/furkies-purrkies and dist/furkies-purrkies somewhere
 - [ ] Regression: Thumbnail cover images are too zoomed in , Images are not showing all there is... (WILL IGNORE)
 - [ ] Add New Book: Developer Cookbook - Introduce the software tutorial Book (add new book)
@@ -33,6 +33,9 @@
 
 ## DONE
 
+- [x] Move templates into db folder
+- [x] Add printer friendly version to westlad-warrior and other video catalogues
+- [x] Bring in print version of video catalogues, there isn't much to print yet but figure something out
 - [x] Potential CNAME problems, needs to be added on per host basis
 - [x] Add Bin
 - [x] WEBSITE WORK ADD UPGRADE ALERT MESSAGE, simplify the Bootstrap Template, please remember that Flex layout has problems.

@@ -48,6 +48,12 @@ else
     echo "$(tput setaf 1)[NO]$(tput sgr 0) db has uncommited changes. SOLUTION: ./system-publish.sh"
 fi
 
+if [[ -z $(cd themes; git status -s) ]]; then
+    echo "$(tput setaf 2)[OK]$(tput sgr 0) record themes are in sync"
+else
+    echo "$(tput setaf 1)[NO]$(tput sgr 0) record themes have uncommited changes. SOLUTION: ./system-publish.sh"
+fi
+
 if [[ -z $(cd templates; git status -s) ]]; then
     echo "$(tput setaf 2)[OK]$(tput sgr 0) record templates are in sync"
 else

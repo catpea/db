@@ -3,6 +3,7 @@ dist
 # Utility and Helper Repositories
 bin
 templates
+themes
 
 # Target Repositories
 homepage
