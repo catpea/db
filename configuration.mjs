@@ -36,6 +36,7 @@ export default {
       description: "A small video book about the twisty little passages of growing up.",
       website: 'Westland Warrior',
       tagline: 'Growing All The Way Up, Until We Become Great Beings',
+      alert: 'I rewrote the build system again, there maybe some tiny little bugs, I will chase them all. I won\'t keep the changelog anymore as the video chapters are now sorted newest-first.',
       icon: "collection-play",
       order: "latest",
 
@@ -123,6 +124,7 @@ export default {
       description: "Just another dang old Audio Book about wisdom and growing up.",
       website: 'Cat Pea University',
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
+      alert: 'I rewrote the build system again, there maybe some tiny little bugs, I will chase them all.',
       icon: "earbuds",
       order: "latest",
 

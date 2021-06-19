@@ -14,7 +14,7 @@ NOTE: since things are not in .submodules, they will not get published.
 
 - avoid running git clone git@github.com:catpea/website.git try using cp -R /home/*/U*/D*/website if possible
 
-### Build Pahase Results/Questions
+### Build Phase Results/Questions
 
 - LOW PRIORITY TODO: publishing to mirrors, where are the mirrors now?
 - Testing passed, no anomalies, high consistency
