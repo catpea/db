@@ -13,6 +13,11 @@ if test -d ./templates; then
   git pull;
   cd -
 fi
+if test -d ./themes; then
+  cd themes;
+  git pull;
+  cd -
+fi
 
 # Main DB
 git pull;
