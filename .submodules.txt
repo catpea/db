@@ -7,7 +7,7 @@ git@github.com:catpea/westland-warrior.git
 # Publish Targets # YOU NEED TO ENABLE THIS WHEN LIVE
 
 # This is the primary catpea.com website
-# git@github.com:catpea/website.git
+git@github.com:catpea/website.git
 
 # This is the primary warrior website, from here westland-valhalla does an upstream-sync.
-# git@github.com:catpea/warrior.git
+git@github.com:catpea/warrior.git
