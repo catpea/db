@@ -20,7 +20,7 @@ blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 
 ```shell
 
-eternia create furkies-purrkies # add poem in the new markdown format
+eternia create furkies-purrkies # add poem in the new markdown format for html say: eternia create furkies-purrkies html
 eternia build catpea.com # build the catpea website
 hs --port 7467 -o -c-1 ./website/docs # npm -g i http-server
 blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
