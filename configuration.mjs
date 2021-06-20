@@ -19,6 +19,7 @@ export default {
       name: 'westland-warrior',
       configuration: {
         // this will override settings for all dependencies in the task, changing the website name here will change it for all sub projects, be careful.
+        subdir: '/warrior', // (endir) hosted in a sub-directory. This will rewrite all html file paths.
       },
       dependencies: [
         'westland-warrior'
@@ -99,6 +100,7 @@ export default {
         { name: "copyNarrations", options: {} },
         { name: "createMirror", options: {} },
         { name: "createWebsite", options: {} },
+        { name: "rewritePaths", options: {} },
         // { name: 'verifyWebsite', options:{} },
       ],
 
