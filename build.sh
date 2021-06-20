@@ -20,5 +20,5 @@ fi
 echo "Review website: hs -o -c-1 ./warrior/docs"
 echo "Review website: hs -o -c-1 ./website/docs"
 echo "Test for broken links: blc http://127.0.0.1:8081/ -roe #(NOTE: requires npm install broken-link-checker -g)"
-
 echo "Publish website: ./publish.sh #(NOTE: this only publishes what is in sub modules)"
+echo "INFO: run ssh westland-valhalla@black and cd Development/warrior/ and ./sync-upstream.sh confirm until westland-valhalla is handed off."
