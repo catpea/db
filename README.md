@@ -10,9 +10,9 @@
 ```shell
 
 eternia create --name "The Inventor" westland-warrior yaml # add chapter
-eternia build westland-warrior # build just the warrior
-hs --port 7467 -o -c-1 ./warrior/docs # npm -g i http-server
-blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
+#TEST: eternia build westland-warrior # build just the warrior
+#TEST: hs --port 7467 -o -c-1 ./warrior/docs # npm -g i http-server
+#TEST: blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 
 ```
 
@@ -21,9 +21,9 @@ blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 ```shell
 
 eternia create furkies-purrkies # add poem in the new markdown format for html say: eternia create furkies-purrkies html
-eternia build catpea.com # build the catpea website
-hs --port 7467 -o -c-1 ./website/docs # npm -g i http-server
-blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
+#TEST: eternia build catpea.com # build the catpea website
+#TEST: hs --port 7467 -o -c-1 ./website/docs # npm -g i http-server
+#TEST: blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
 
 ```
 
@@ -34,10 +34,12 @@ Optionally, to create HTML heavy content in furkies-purrkies ```eternia create f
 
 ```shell
 
-./import.sh # warning wipes indexes
-eternia build catpea.com
+#./import.sh # warning wipes indexes
+./build.sh
+./status.sh
 ./system-publish.sh # publish changes to system
 ./publish.sh # publish content
+./bin/audio-to-video/index.sh
 
 ```
 
