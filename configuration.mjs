@@ -180,10 +180,17 @@ export default {
         },
 
         {
+          name: 'NPM',
+          icon: 'link-45deg',
+          href: 'https://www.npmjs.com/~catpea',
+        },
+
+        {
           name: 'GitHub',
           icon: 'link-45deg',
           href: 'https://github.com/catpea',
         },
+
       ],
 
       templates: {

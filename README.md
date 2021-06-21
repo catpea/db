@@ -3,13 +3,13 @@
 ## Creating new records:
 
 - eternia create furkies-purrkies [md] # to create markdown record.
-- eternia create --name "The Philosopher" westland-warrior # to create a new yaml record.
+- eternia create --name "The Philosopher" westland-warrior yaml # to create a new yaml record.
 
 ## Adding A New Chapter To Westland Warrior
 
 ```shell
 
-eternia create --name "The Philosopher" westland-warrior # add chapter
+eternia create --name "The Inventor" westland-warrior yaml # add chapter
 eternia build westland-warrior # build just the warrior
 hs --port 7467 -o -c-1 ./warrior/docs # npm -g i http-server
 blc http://127.0.0.1:7467/ -roe # npm -g i broken-link-checker
