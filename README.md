@@ -52,5 +52,8 @@ It is based on bowel and performs several content translations along the way.
 
 ./status.sh will inform you on the status of your clone and present solutions.
 
+# IMPORTANT TODO
+
+- Permalinks
 
 [Eternia]: https://www.npmjs.com/package/eternia
