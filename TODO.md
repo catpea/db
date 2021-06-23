@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] (Sorry, 5,000 letter limit in YouTube descriptions see catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code)
 - [ ] Run ./import.sh; eternia build catpea.com; ./publish to keep db up to date.
 - [ ] Run upstream-sync execution on warrior user
 - [ ] Add poem via Earth Host (incl, Audacity Test, Microphone, Noise Level, etc)
