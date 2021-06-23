@@ -67,7 +67,7 @@ export default {
         },
       ],
 
-      templates: {
+      templates: { // first one is the default one.
         yaml: 'templates/westland-warrior-yaml',
       },
 
@@ -193,9 +193,9 @@ export default {
 
       ],
 
-      templates: {
+      templates: { // first one is the default one.
+        md: 'templates/furkies-purrkies-md',
         html: 'templates/furkies-purrkies-html',
-        md: 'templates/furkies-purrkies-md'
       },
 
       transformers: [

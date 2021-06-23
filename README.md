@@ -56,4 +56,10 @@ It is based on bowel and performs several content translations along the way.
 
 - Permalinks
 
+# TLDR;
+
+eternia create furkies-purrkies;
+./build.sh
+./status.sh
+
 [Eternia]: https://www.npmjs.com/package/eternia
