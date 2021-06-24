@@ -60,6 +60,7 @@ It is based on bowel and performs several content translations along the way.
 
 eternia create furkies-purrkies;
 ./build.sh
+hs -o -c-1 ./website/docs
 ./status.sh
 
 [Eternia]: https://www.npmjs.com/package/eternia
