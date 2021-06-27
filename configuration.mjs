@@ -134,7 +134,7 @@ export default {
       description: "Just another dang old Audio Book about wisdom and growing up.",
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
-      //alert: 'Recently upgraded the system, but I caught all the little bugs now, and everything should work.',
+      //alert: 'Wind, Heavy Rains and Touchy Transformers Alert. I could lose electricity tonight, and have to publish both poems tommorow.',
       icon: "earbuds",
       order: "latest",
 
