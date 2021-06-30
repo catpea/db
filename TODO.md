@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Eternia is parsing print version to create text version becasue html-to-text is micromanaging, find a better way. Dont use cheerio becasue .text() does not convert br tags to slash-n
 - [ ] (Sorry, 5,000 letter limit in YouTube descriptions see catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code)
 - [ ] Five overloads to mount folders piece by piece (a theme upgrade)
 - [ ] Run ./import.sh; eternia build catpea.com; ./publish to keep db up to date.
