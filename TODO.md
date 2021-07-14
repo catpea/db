@@ -1,5 +1,5 @@
 # TODO
-
+- [ ] Add Perma Links!!!
 - [ ] Full text version is available ad free at: https://catpea.com
 - [ ] (Sorry, 5,000 letter limit in YouTube descriptions see catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code)
 - [ ] Eternia is parsing print version to create text version becasue html-to-text is micromanaging, find a better way. Dont use cheerio becasue .text() does not convert br tags to slash-n
