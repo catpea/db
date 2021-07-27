@@ -1,4 +1,5 @@
 # TODO
+- [ ] atom  "$(ls -1dat westland-warrior/* | grep -v json | head -n 1)"
 - [ ] Add more advanced background videos
 - [ ] Add Perma Links!!!
 - [ ] Full text version is available ad free at: https://catpea.com
