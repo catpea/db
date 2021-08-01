@@ -134,31 +134,49 @@ export default {
       description: "Just another dang old Audio Book about wisdom and growing up.",
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
-      //alert: 'Wind, Heavy Rains and Touchy Transformers Alert. I could lose electricity tonight, and have to publish both poems tommorow.',
+      alert: `Possible hosting disruptions/delays ahead, <a href="http://catpea.com">catpea.com</a> will always be the most reliable way to access the site. However, the site is now at 5.2GB (from a generic/uncompressed perspective), that is probably/possibly 200MB over github recommendations (and the way they measure things), there maybe publishing delays or disruptions. To resolve this issue I am testing a new hosting company netlify. Here is a temporary test address that may have more recent publications: <a href="https://catpea.netlify.app/">https://catpea.netlify.app/</a> Please note that the YouTube channel has thus far been a reliable source of most recent audio poetry: <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">Cat Pea University on YouTube</a> If netlify works out then I'll point catpea.com to it instead of github, and update this message.`,
       icon: "earbuds",
       order: "latest",
 
       // Social Network Links For Website Plugin
       links: [
+        
         {
-          name: "Source Code",
+          name: "Netlify Mirror",
+          icon: "link-45deg",
+          href: "https://catpea.netlify.app/",
+        },
+        {
+          name: "Vercel Mirror",
+          icon: "link-45deg",
+          href: "https://catpea.vercel.app/",
+        },
+        {
+          name: "Render Mirror",
+          icon: "link-45deg",
+          href: "https://catpea.onrender.com/",
+        },
+        {
+          name: "Cloudflare Mirror",
+          icon: "link-45deg",
+          href: "https://catpea.pages.dev/",
+        },
+        {
+          name: "YouTube Version",
+          icon: "link-45deg",
+          href: "https://www.youtube.com/playlist?list=PLOo-pqnffyOqsK6hf5tFwMqzvhogksrgW",
+        },
+
+        {
+          name: "Github Source Code",
           icon: "link-45deg",
           href: "https://github.com/catpea/furkies-purrkies",
         },
-        // {
-        //   name: "Mirror",
-        //   icon: "link-45deg",
-        //   href: "https://catpea.github.io/poetry/",
-        // },
+
         {
           name: "Bugs",
           icon: "link-45deg",
           href: "https://github.com/catpea/furkies-purrkies/issues",
-        },
-        {
-          name: "YouTube",
-          icon: "link-45deg",
-          href: "https://www.youtube.com/playlist?list=PLOo-pqnffyOqsK6hf5tFwMqzvhogksrgW",
         },
       ],
 

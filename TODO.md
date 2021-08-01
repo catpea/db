@@ -31,10 +31,12 @@
 - [ ] Fast Audiobook Compiler, upload to google docs via node google api.
 - [ ] AUtomate YouTube uploads via API
 - [ ] Multihosting Review
-  - [ ] https://vercel.com
+  - [x] https://vercel.com
+  - [x] https://cloudflare.com
+  - [x] https://www.netlify.com
+  - [x] https://render.com/pricing
+  - [ ] https://www.vultr.com/
   - [ ] https://surge.sh
-  - [ ] https://cloudflare.com
-  - [ ] https://www.netlify.com
   - [ ] https://about.gitlab.com/stages-devops-lifecycle/pages/
 
 ## DONE
