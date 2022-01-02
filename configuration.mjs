@@ -141,11 +141,11 @@ export default {
       <a href="https://docs.github.com/en/github/managing-large-files/working-with-large-files/what-is-my-disk-quota">Github recommends 1GB websites with a 5GB hard limit</a>.
       To resolve this issue I am now testing a series of hosting companies, both as a primary host, and a mirror host.
       Here are the temporary addresses that I am using in my testing:
-      <a href="https://catpea.netlify.app/">catpea.netlify.app</a> (via Netlify),
       <a href="https://catpea.vercel.app/">catpea.vercel.app</a> (via Vercel),
       <a href="https://catpea.onrender.com/">catpea.onrender.com</a> (via Render), and
       <a href="https://catpea.pages.dev/">catpea.pages.dev</a> (via Cloudflare). I am basically just looking for failures/annoyances over time.
       Please note that the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> has thus far been a reliable source of most recent audio poetry: <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">Cat Pea University on YouTube</a>.
+      (update: catpea.netlify.app via Netlify is no longer under consideration.)
       `,
       icon: "earbuds",
       order: "latest",
@@ -153,11 +153,11 @@ export default {
       // Social Network Links For Website Plugin
       links: [
 
-        {
-          name: "Netlify Mirror",
-          icon: "link-45deg",
-          href: "https://catpea.netlify.app/",
-        },
+        // {
+        //   name: "Netlify Mirror",
+        //   icon: "link-45deg",
+        //   href: "https://catpea.netlify.app/",
+        // },
         {
           name: "Vercel Mirror",
           icon: "link-45deg",
