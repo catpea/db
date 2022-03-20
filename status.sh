@@ -30,7 +30,7 @@ if command -v eternia &> /dev/null; then
 else
   echo "$(tput setaf 1)[NO]$(tput sgr 0) eternia not found. SOLUTION: npm -g i eternia"
 fi
-if command -v hs &> /dev/null; then
+if command -v http-server &> /dev/null; then
   echo "$(tput setaf 2)[OK]$(tput sgr 0) hs (http-server) is installed"
 else
   echo "$(tput setaf 1)[NO]$(tput sgr 0) http-server not found. SOLUTION: npm -g i http-server"

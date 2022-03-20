@@ -134,19 +134,42 @@ export default {
       description: "Just another dang old Audio Book about wisdom and growing up.",
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
-      alertTitle: 'Possible Hosting Disruption Notice',
+
+      alertTitle: 'Systems Returning To Normal',
+ 
       alert: `
-      Possible hosting disruptions/delays ahead, <a href="http://catpea.com">catpea.com</a> will always be the most reliable way to access the site.
-      The site is now at some 5.2GB (apparently, on my disk it only shows 2.6 GB), and <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">github pages</a> fail to publish sometimes.
-      <a href="https://docs.github.com/en/github/managing-large-files/working-with-large-files/what-is-my-disk-quota">Github recommends 1GB websites with a 5GB hard limit</a>.
-      To resolve this issue I am now testing a series of hosting companies, both as a primary host, and a mirror host.
-      Here are the temporary addresses that I am using in my testing:
-      <a href="https://catpea.vercel.app/">catpea.vercel.app</a> (via Vercel),
-      <a href="https://catpea.onrender.com/">catpea.onrender.com</a> (via Render), and
-      <a href="https://catpea.pages.dev/">catpea.pages.dev</a> (via Cloudflare). I am basically just looking for failures/annoyances over time.
-      Please note that the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> has thus far been a reliable source of most recent audio poetry: <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">Cat Pea University on YouTube</a>.
-      (update: catpea.netlify.app via Netlify is no longer under consideration.)
+
+      Github had site wide problems. It wasn't just my 3.6 GB of poems causing deployemnt errors for me, eveyone was getting errors.
+      But I had the same probem with github before, so I will monitor their service quality, for now, and make some informed decisions later.
+
+      In case of other errors and delays, the following backup links should work without any trouble:
+      <a href="https://catpea.vercel.app/">catpea.vercel.app</a>,
+      <a href="https://catpea.onrender.com/">catpea.onrender.com</a>,
+      <a href="https://catpea.pages.dev/">catpea.pages.dev</a>, and
+      especially the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a>.
       `,
+
+
+      // I guess their resource limits (a way to prevent individuals from using too much of their processing power)
+      // and the 3.6 GB website size (which takes a while to download, put-in-a-file and upload) combined to cause multiple failures.
+      // And in the process of trying to recover from those failires, more limits were hit, now more on the system or API level.
+      // Preventing the system that builds the website from building.
+      // In a word, their more advanced system kicked in as the website tried to re-build too many times (do too many things over and over).
+      //
+      //
+
+      // alert: `
+      // Possible hosting disruptions/delays ahead, <a href="http://catpea.com">catpea.com</a> will always be the most reliable way to access the site.
+      // The site is now at some 5.2GB (apparently, on my disk it only shows 2.6 GB), and <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">github pages</a> fail to publish sometimes.
+      // <a href="https://docs.github.com/en/github/managing-large-files/working-with-large-files/what-is-my-disk-quota">Github recommends 1GB websites with a 5GB hard limit</a>.
+      // To resolve this issue I am now testing a series of hosting companies, both as a primary host, and a mirror host.
+      // Here are the temporary addresses that I am using in my testing:
+      // <a href="https://catpea.vercel.app/">catpea.vercel.app</a> (via Vercel),
+      // <a href="https://catpea.onrender.com/">catpea.onrender.com</a> (via Render), and
+      // <a href="https://catpea.pages.dev/">catpea.pages.dev</a> (via Cloudflare). I am basically just looking for failures/annoyances over time.
+      // Please note that the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> has thus far been a reliable source of most recent audio poetry: <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">Cat Pea University on YouTube</a>.
+      // (update: catpea.netlify.app via Netlify is no longer under consideration.)
+      // `,
       icon: "earbuds",
       order: "latest",
 
@@ -193,10 +216,28 @@ export default {
       ],
 
       network: [
+        // {
+        //   name: 'Urban Dictionary',
+        //   icon: 'link-45deg',
+        //   href: 'https://www.urbandictionary.com/author.php?author=Cat%20Pea',
+        // },
+
         {
-          name: 'Urban Dictionary',
+          name: 'portfolio.jpg',
           icon: 'link-45deg',
-          href: 'https://www.urbandictionary.com/author.php?author=Cat%20Pea',
+          href: 'https://catpea.com/portfolio.jpg',
+        },
+
+        {
+          name: 'Hacker News',
+          icon: 'link-45deg',
+          href: 'https://news.ycombinator.com/user?id=catpea',
+        },
+
+        {
+          name: 'Cat Pea Reddit',
+          icon: 'link-45deg',
+          href: 'https://www.reddit.com/user/catpea-com/',
         },
 
         {

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 eternia build catpea.com
+./bin/portfolio-image/index.sh
+
 if test -d ./website; then
   mkdir -p ./website/docs
   echo "Copying data into ./website/docs"
