@@ -103,6 +103,7 @@ export default {
         { name: "copyLocalLinks", options: {} },
         { name: "copyImages", options: {} },
         { name: "copyNarrations", options: {} },
+        { name: "createNarrationList", options: {} },
         { name: "createMirror", options: {} },
         { name: "createWebsite", options: {} },
         { name: "rewritePaths", options: {} },
@@ -135,19 +136,20 @@ export default {
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
 
-      alertTitle: 'Systems Returning To Normal',
- 
-      alert: `
 
-      Github had site wide problems. It wasn't just my 3.6 GB of poems causing deployemnt errors for me, eveyone was getting errors.
-      But I had the same probem with github before, so I will monitor their service quality, for now, and make some informed decisions later.
 
-      In case of other errors and delays, the following backup links should work without any trouble:
-      <a href="https://catpea.vercel.app/">catpea.vercel.app</a>,
-      <a href="https://catpea.onrender.com/">catpea.onrender.com</a>,
-      <a href="https://catpea.pages.dev/">catpea.pages.dev</a>, and
-      especially the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a>.
-      `,
+      // alertTitle: 'Systems Returning To Normal',
+      // alert: `
+      //
+      // Github had site wide problems. It wasn't just my 3.6 GB of poems causing deployemnt errors for me, eveyone was getting errors.
+      // But I had the same probem with github before, so I will monitor their service quality, for now, and make some informed decisions later.
+      //
+      // In case of other errors and delays, the following backup links should work without any trouble:
+      // <a href="https://catpea.vercel.app/">catpea.vercel.app</a>,
+      // <a href="https://catpea.onrender.com/">catpea.onrender.com</a>,
+      // <a href="https://catpea.pages.dev/">catpea.pages.dev</a>, and
+      // especially the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a>.
+      // `,
 
 
       // I guess their resource limits (a way to prevent individuals from using too much of their processing power)
@@ -176,11 +178,7 @@ export default {
       // Social Network Links For Website Plugin
       links: [
 
-        // {
-        //   name: "Netlify Mirror",
-        //   icon: "link-45deg",
-        //   href: "https://catpea.netlify.app/",
-        // },
+ 
         {
           name: "Vercel Mirror",
           icon: "link-45deg",
@@ -216,6 +214,7 @@ export default {
       ],
 
       network: [
+        // Ew.
         // {
         //   name: 'Urban Dictionary',
         //   icon: 'link-45deg',
@@ -238,6 +237,12 @@ export default {
           name: 'Cat Pea Reddit',
           icon: 'link-45deg',
           href: 'https://www.reddit.com/user/catpea-com/',
+        },
+
+        {
+          name: 'Internet Archive',
+          icon: 'link-45deg',
+          href: 'https://archive.org/details/@catpea-com',
         },
 
         {
@@ -304,6 +309,7 @@ export default {
         { name: "copyLocalLinks", options: {} },
         { name: "copyImages", options: {} },
         { name: "copyNarrations", options: {} },
+        { name: "createNarrationList", options: {} },
         { name: "createMirror", options: {} },
         { name: "createWebsite", options: {} },
         // { name: 'verifyWebsite', options:{} },
