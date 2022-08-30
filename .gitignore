@@ -9,10 +9,15 @@ themes
 homepage
 website
 warrior
+potato
 
 # Content Repositories
 furkies-purrkies
 westland-warrior
+
+
+catpea-org
+catpea-org.sh
 
 # Ignore YouTube Video Files (video version of the mp3 files)
 *.mp4
