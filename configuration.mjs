@@ -42,7 +42,7 @@ export default {
 
 
       tagline: 'Growing All The Way Up, Until We Become Great Beings',
-      // alert: 'I upgraded the website, I think I fixed all the bugs now, all should work now.',
+      //alert: 'Website hosting server seems to be having problems.',
       icon: "collection-play",
       order: "latest",
 
@@ -136,9 +136,32 @@ export default {
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
 
-
+      // alertTitle: 'Testing A New Server, There Maybe Some Hiccups',
+      //
+      // alert: `This is the new server setup, it is 4GB smaller, which should make it fast, and make github and vercel happy.
+      // The audio files are no longer served from github, they are served from catpea.org which is a new mirror and the new audio server.
+      //
+      // I expect things to crash, but there are no red flags anywhere nothing is broken. It is just an untested setup, and those tend to get ya.
+      //
+      // Just a reminder, when the audio files reached 4GB on github, github pages stoped working, and when they reached 4.5GB the backup host (vercel) stoped accepting changes, and I had to skip uploading older poem recordings, which was not cool because Squirty Squirrels is one of my best early poems.
+      //
+      // The <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> is going strong.
+      //
+      // I will soon update <a href="https://catpea.onrender.com/">catpea.onrender.com</a> and <a href="https://catpea.pages.dev/">catpea.pages.dev</a> mirrors.
+      //
+      //  `,
+      // alert: `I rented a tiny inexpensive server, I will use it for audio file storage. But I still need to set everything up.
+      // It seems like this won't cause any disruptions.
+      //
+      // Just incase, the following backup links should work OK for now:
+      // <a href="https://catpea.onrender.com/">catpea.onrender.com</a>,
+      // <a href="https://catpea.pages.dev/">catpea.pages.dev</a>.
+      // The <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> is going strong.
+      //
+      //  `,
 
       // alertTitle: 'Systems Returning To Normal',
+
       // alert: `
       //
       // Github had site wide problems. It wasn't just my 3.6 GB of poems causing deployemnt errors for me, eveyone was getting errors.
@@ -178,19 +201,19 @@ export default {
       // Social Network Links For Website Plugin
       links: [
 
- 
+
         {
           name: "Vercel Mirror",
           icon: "link-45deg",
           href: "https://catpea.vercel.app/",
         },
         {
-          name: "Render Mirror",
+          name: "Render Archive Mirror",
           icon: "link-45deg",
           href: "https://catpea.onrender.com/",
         },
         {
-          name: "Cloudflare Mirror",
+          name: "Cloudflare Archive Mirror",
           icon: "link-45deg",
           href: "https://catpea.pages.dev/",
         },
@@ -198,6 +221,12 @@ export default {
           name: "YouTube Version",
           icon: "link-45deg",
           href: "https://www.youtube.com/playlist?list=PLOo-pqnffyOqsK6hf5tFwMqzvhogksrgW",
+        },
+
+        {
+          name: "Bitbucket Mirror",
+          icon: "link-45deg",
+          href: "https://catpea.bitbucket.io/",
         },
 
         {
@@ -232,6 +261,14 @@ export default {
           icon: 'link-45deg',
           href: 'https://news.ycombinator.com/user?id=catpea',
         },
+
+
+        {
+          name: 'YouTube',
+          icon: 'link-45deg',
+          href: 'https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ',
+        },
+
 
         {
           name: 'Cat Pea Reddit',
@@ -312,6 +349,7 @@ export default {
         { name: "createNarrationList", options: {} },
         { name: "createMirror", options: {} },
         { name: "createWebsite", options: {} },
+        { name: "copyWebAudio", options: {} },
         // { name: 'verifyWebsite', options:{} },
       ],
 

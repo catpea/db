@@ -1,8 +1,9 @@
 # TODO
+- [ ] paint, record audio, export progress painting, add poem audio, upload progress, upload to reddt, add url to poem, built, video, done
 - [ ] atom  "$(ls -1dat westland-warrior/* | grep -v json | head -n 1)"
 - [ ] Add more advanced background videos
 - [ ] Add Perma Links!!!
-- [ ] Full text version is available advertisement free at: https://catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code
+- [ ] Audio and full text version is available advertisement free at: https://catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code
 - [ ] (Sorry, 5,000 letter limit in YouTube descriptions see catpea.com or visit https://github.com/catpea/furkies-purrkies for source-code)
 - [ ] Eternia is parsing print version to create text version becasue html-to-text is micromanaging, find a better way. Dont use cheerio becasue .text() does not convert br tags to slash-n
 - [ ] Five overloads to mount folders piece by piece (a theme upgrade)

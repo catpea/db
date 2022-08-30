@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 
+# Dist is the primary folder!!!!
+# we copy from dist to satisfy other needs
+
 eternia build catpea.com
 ./bin/portfolio-image/index.sh
 
-if test -d ./website; then
-  mkdir -p ./website/docs
-  echo "Copying data into ./website/docs"
-  rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./website/docs
-  echo catpea.com > ./website/docs/CNAME
+# if test -d ./website; then
+#   mkdir -p ./website/docs
+#   echo "Copying data into ./website/docs"
+#   rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./website/docs
+#   echo catpea.com > ./website/docs/CNAME
+# fi
+
+if test -d ./potato; then
+  mkdir -p ./potato/docs
+  echo "Copying NON AUDIO data into ./potato/docs"
+  rsync -qav --progress --exclude 'audio/poetry-????.mp3' ./dist/furkies-purrkies/wwwroot/ ./potato/docs
+  echo catpea.com > ./potato/docs/CNAME
 fi
 
 eternia build westland-warrior
@@ -16,6 +26,14 @@ if test -d ./warrior; then
   echo "Copying data into ./warrior/docs"
   rsync -qav --progress ./dist/westland-warrior/wwwroot/ ./warrior/docs
 fi
+
+# echo "JUST DELETED 100 MP3 FILES FROM ls website/docs/audio/poetry-00*.mp3 might want to fix that";
+# rm website/docs/audio/poetry-00*.mp3
+
+
+echo "Copying data into catpea-org"
+rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./catpea-org/public
+
 
 # echo "Review website: hs -o -c-1 ./dist/furkies-purrkies/wwwroot/"
 # echo "Review website: hs -o -c-1 ./dist/westland-warrior/wwwroot/"

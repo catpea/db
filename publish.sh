@@ -5,3 +5,7 @@ echo NOTE: if you are running in test mode where you forked warrior/website/etc 
 
 # Automated
 ./bin/upload-submodules/index.sh
+
+# Messy
+./catpea-org.sh
+
