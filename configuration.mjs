@@ -136,7 +136,10 @@ export default {
 
       tagline: 'Home of Furkies Purrkies and Westland Warrior',
 
-      // alertTitle: 'Testing A New Server, There Maybe Some Hiccups',
+      alertTitle: '92 Hour (4GB mp3) Version Uploaded To The Internet Archive',
+      alert: `Every once in a while I smush all the files and upload them to the Internet Archive as a kind of an Audio Book.
+      You can listen-to or download the 92 hour 4GB mp3 file at <a href="https://archive.org/details/912-poems" target="_blank">https://archive.org/details/912-poems</a>`,
+
       //
       // alert: `This is the new server setup, it is 4GB smaller, which should make it fast, and make github and vercel happy.
       // The audio files are no longer served from github, they are served from catpea.org which is a new mirror and the new audio server.
