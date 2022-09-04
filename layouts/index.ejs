@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <?- include('partials/site-head.ejs') ?>
+  </head>
+  <body>
+  <div class="container">
+  <?- include('partials/site-header.ejs') ?>
+  </div>
+  <main class="container">
+    <?- include('partials/site-latest.ejs') ?>
+    <?- include('partials/site-featured.ejs') ?>
+    <div class="row g-5 my-5">
+      <div class="col-md-8">
+        <?- include('partials/site-listing.ejs') ?>
+        <?- include('partials/site-pagination.ejs') ?>
+      </div>
+      <div class="col-md-4">
+        <?- include('partials/site-side.ejs') ?>
+      </div>
+    </div>
+  </main>
+  <?- include('partials/site-footer.ejs') ?>
+  </body>
+</html>

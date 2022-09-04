@@ -2,15 +2,25 @@
   "type": "module",
   "dependencies": {
     "commander": "^9.4.0",
+    "ejs": "^3.1.8",
+    "front-matter": "^4.0.2",
     "fs-extra": "^10.1.0",
     "fs-extra-promise-es6": "^0.1.1",
     "globby": "^13.1.2",
     "gulp-each": "^0.5.0",
+    "html-to-text": "^8.2.1",
     "invariant": "^2.2.4",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "marked": "^4.1.0",
+    "remark": "^14.0.2",
     "turndown": "^7.1.1",
+    "unist-util-visit": "^4.1.1",
     "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "watch": "nodemon --watch layouts -e ejs,css --watch  bugfix-004-generate-static.js   bugfix-004-generate-static.js"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
