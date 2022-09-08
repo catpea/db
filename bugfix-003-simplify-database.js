@@ -33,18 +33,24 @@ for (const database of databases){
   const index = await readJson(path.join(database,'index.json'));
   const posts = index.data;
   let weight = 100;
+  let number = 1;
 
   for (const id of posts) {
+    console.log(`[${number}/${posts.length}] id=${id}`);
     const src = path.join(database, id);
     const name = getIdentity(src);
 
     await transportContentFile({database, name, src, dest})
+    await updateMarkdownLinks({database, name, src, dest});
     await addFrontmatter({database, name, src, dest}, {weight});
     // await copyAllFiles({database, name, src, dest});
-    // await updateMarkdownLinks({database, name, src, dest});
+
     // TODO: check presence of files mentioned in metadata
 
+    // TODO: Images must be properly resized - this should happen when creating a new record
+
     weight = weight + 100;
+    number = number + 1;
   }
 
 }
@@ -71,6 +77,10 @@ async function transportContentFile({database, name, src, dest}){
     const content = turndownService.turndown(sourceContent);
     await writeFile(targetFile, content)
   } else if( await pathExists(`${src}/content.yaml`) ){
+
+     TODO: HTML is not good here,
+    bring in a custom renderer that just does h3 and the linked image IMAGE
+
     const file = `${src}/cache/html.html`;
     const sourceContent = (await readFile(file)).toString();
     //console.log(node.url);(`Convert ${file} ... ${targetFile}`);
@@ -94,10 +104,10 @@ async function addFrontmatter({database, name, src, dest}, merge){
   const markdownFile = path.join(targetBase, 'index.md');
   const markdownData = (await readFile(markdownFile)).toString();
 
-  if(markdownData.startsWith('---')){
-    console.log('Front Matter Detected: returning early.');
-    return;
-  }
+  // if(markdownData.startsWith('---')||markdownData.startsWith('***')){
+  //   console.log('Front Matter Detected: returning early.');
+  //   return;
+  // }
 
   const configurationFile = path.join(src, 'configuration.json');
   const configurationData = await readJson(configurationFile);
@@ -106,6 +116,9 @@ async function addFrontmatter({database, name, src, dest}, merge){
 
   if(recordData.images){
     configurationData.images  = recordData.images.map(o=>({title:o.title, src:o.url}));
+  }
+  if(recordData.links){
+    configurationData.links  = recordData.links.map(o=>({title:o.title, url:o.url}));
   }
 
   if(configurationData.artworks){
@@ -173,8 +186,7 @@ async function addFrontmatter({database, name, src, dest}, merge){
 async function copyAllFiles({database, name, src, dest}){
   const source = path.join(src, 'files');
   const target = path.join(dest, database, name, 'files');
-  //console.log(node.url);('Copying: ', source, target);
-  await copy(source, target);
+  if(!(await (pathExists(target)))) await copy(source, target);
 }
 
 async function updateMarkdownLinks({database, name, src, dest}){
@@ -183,14 +195,15 @@ async function updateMarkdownLinks({database, name, src, dest}){
   let markdownData = (await readFile(markdownFile)).toString();
 
   const updatedMarkdownBuffer = await remark()
+  .data('settings', {rule: '-'})
   .use(fixImagePaths)
   .use(fixLocalLinks)
   .process(markdownData);
 
   const updatedMarkdownString = (updatedMarkdownBuffer).toString();
 
-  if(markdownData != updatedMarkdown){
-    await writeFile(markdownFile, updatedMarkdown);
+  if(markdownData != updatedMarkdownString){
+    await writeFile(markdownFile, updatedMarkdownString);
   }
 
 }
@@ -218,7 +231,7 @@ function fixImagePaths() {
           // }
 
           if(node.url.startsWith('/image/')){
-            //console.log(node.url);(node.url);
+            console.log(node.url);(node.url);
             node.url = node.url.replace(/^\/image\//, 'files/')
           }
 

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Roboto";
+  src: url('fonts/fira/woff2/Roboto-Regular.ttf') format('truetype');
+}
+
+body {
+  background-color: #160020;
+  padding: 0;
+}
+
+a {
+  color: gold;
+}
+
+
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.75) !important;
+}
+
+
+.post-content > p:first-child {
+  font-size: 1.5rem;
+}
+
+ 

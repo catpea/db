@@ -1,0 +1,18 @@
+<section>
+  <? for(const alert of alerts){ ?>
+    <div class="alert alert-<?=alert.type?> bg-dark border border-<?=alert.type?> text-<?=alert.type?>" role="alert">
+      <?if(alert.text){?>
+        <p>
+          <? iff( chain([{success:true, name:'bi-check-circle-fill'},{info:true, primary:true, secondary:true, light:true, dark:true, name:'bi-info-circle-fill'},{warning:true, danger:true, name:'bi-exclamation-triangle-fill'}]).find(alert.type), function(icon){ ?> <i class="<?= icon.name ?> me-2"></i> <? }) ?>
+          <?=alert.text?>
+        </p>
+      <?}?>
+
+      <?if(alert.link){?><p><a href="<?=alert.link.url?>" class="alert-link text-<?=alert.type?>"><?=alert.link.title?></a></p><?}?>
+      <?if(alert.note){?><hr><p class="mb-0 small"><?=alert.note?></p><?}?>
+      <?-alert.html?>
+
+
+    </div>
+  <?}?>
+<section>

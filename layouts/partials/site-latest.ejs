@@ -1,9 +1,87 @@
-<? iff( posts.nth(-1), function(o){ ?>
-  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic"><?- o.title ?></h1>
-      <p class="lead my-3"><?- chain( o.content ).plaintext().truncate({length: 111, separator: /\W/i, 'omission': '...'}).value() ?></p>
-      <p class="lead mb-0"><a href="/<?- o.guid ?>" class="text-white fw-bold">Continue Reading</a></p>
+<? iff( posts.nth(-1), function(post){ ?>
+
+  <div class="row p-4 p-md-5 mb-4 rounded text-bg-dark">
+
+    <div class="col-md-3 px-0 bg-danger  order-md-last">fffd
     </div>
+
+    <div class="col-md-8 px-0 order-md-first">
+      <h1 class="display-5">
+        <span class="text-muted">Latest:</span>
+        <span class="fst-italic"><?- post.title ?></span>
+      </h1>
+      <p class="lead my-3"><?- chain( post.content ).plaintext().truncate({length: 256, separator: /\W/i, 'omission': '...'}).value() ?></p>
+      <p class="lead mb-0">
+        <a href="https://catpea.org/<?- post.guid ?>/files/<?- post.audio ?>" class="btn btn-warning"><i class="bi bi-play-circle"></i> Listen</a>
+        <a href="/data/<?- post.guid ?>" class="btn btn-outline-warning"><i class="bi bi-eye"></i> View</a>
+        <a href="/data/<?- post.guid ?>6#references" title="Contains Links or References" class="btn btn-outline-info float-end">2 Links</a>
+      </p>
+    </div>
+
+
   </div>
+
+
+
+
+
+
+
+
+
+               <a href="/read/furkies-purrkies/906">
+                 <img src="/image/lg-poetry-0906-illustration.jpg" class="card-img-top" alt="Digital Art, Is Evolution Of Art">
+               </a>
+
+
+
+
+               <div class="card-body">
+
+                 <a href="/read/furkies-purrkies/906" class="text-decoration-none">
+                   <h4 class="card-title text-warning">Digital Art, Is Evolution Of Art</h4>
+                   <h6 class="card-title text-muted">Furkies Purrkies #906</h6>
+                 </a>
+                  <p class="card-text small">If artists, especially those who act like mentors were more honest,
+  they would allow new comers to art to create hyper-realistic works.
+  Instead they send the new students on a round about journey,
+  because deep down, they don’t want newcomers to be as good as they are.
+  Considering the state that the world is in today,
+  we must use art to practice zero tolerance for manipulation, self-delusion, and lies.
+
+  We are all natural born artists,
+  my message to those who still want to use art to make themselves look...</p>
+               </div>
+
+
+             <div class="card-body">
+               <a href="https://catpea.org/audio/poetry-0906.mp3" class="btn btn-warning"><i class="bi bi-play-circle"></i> Listen</a>
+               <a href="/read/furkies-purrkies/906" class="btn btn-outline-warning"><i class="bi bi-eye"></i> View</a>
+                <a href="/read/furkies-purrkies/906#references" title="Contains Links or References" class="btn btn-outline-info float-end">2 Links</a>
+             </div>
+
+
+
+
+
+
+
+
+             <div class="card-footer text-muted small">
+
+
+                  Created Tuesday, August 23rd 2022, 7:55:23 pm
+
+
+             </div>
+
+
+
+
+
+
+
+
+
+
 <? }) ?>

@@ -14,13 +14,17 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "marked": "^4.1.0",
+    "moment": "^2.29.4",
+    "pagination": "^0.4.6",
     "remark": "^14.0.2",
+    "sharp": "^0.31.0",
     "turndown": "^7.1.1",
     "unist-util-visit": "^4.1.1",
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "watch": "nodemon --watch layouts -e ejs,css --watch  bugfix-004-generate-static.js   bugfix-004-generate-static.js"
+    "watch": "nodemon --watch layouts -e ejs,css --watch  bugfix-004-generate-static.js   bugfix-004-generate-static.js",
+    "server": "http-server -c-1 dist/new-website"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

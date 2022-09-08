@@ -1,6 +1,73 @@
-<footer class="blog-footer">
-  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-  <p>
-    <a href="#">Back to top</a>
-  </p>
+<footer class="text-bg-dark pb-2 mt-3 shadow rounded-top" style="min-height: 32rem;">
+
+  <div class="text-end">
+    <a class="d-inline p-2" href="#top"><i class="bi bi-box-arrow-in-up"></i></a>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-12 col-lg-4 mb-md-5">
+
+      <h5 class="mb-3 mb-lg-5 mt-5">
+        Navigation
+        <small class="text-muted">Site Navigation</small>
+      </h5>
+      <ul class="list-unstyled">
+      <? for(const link of network.filter('navigation')){ ?>
+        <li><a class="btn-link text-muted text-decoration-none" href="<?= link.url ?>"><?= link.title ?></a></li>
+      <? } ?>
+      </ul>
+
+
+      <span class="opacity-25 pe-1 text-muted small d-sm-none">&pi;:xs</span>
+      <span class="opacity-25 pe-1 text-muted small d-none d-sm-inline d-md-none">&pi;:sm</span>
+      <span class="opacity-25 pe-1 text-muted small d-none d-md-inline d-lg-none">&pi;:md</span>
+      <span class="opacity-25 pe-1 text-muted small d-none d-lg-inline d-xl-none">&pi;:lg</span>
+      <span class="opacity-25 pe-1 text-muted small d-none d-xl-inline d-xxl-none">&pi;:xl</span>
+      <span class="opacity-25 pe-1 text-muted small d-none d-xxl-inline">&pi;:xxl</span>
+
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4">
+      <h5 class="mb-3 mb-lg-5 mt-5">
+        Mirrors
+        <small class="text-muted">Website Backups & Snapshots</small>
+      </h5>
+      <ul class="list-unstyled">
+      <? for(const link of network.filter('mirror')){ ?>
+        <li><a class="btn-link text-muted text-decoration-none" href="<?= link.url ?>"><?= link.title ?></a></i>
+      <? } ?>
+      </ul>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4">
+
+
+      <h5 class="mb-3 mb-lg-5 mt-5">
+        Network
+        <small class="text-muted">Cat Pea In The Wild</small>
+      </h5>
+      <ul class="list-unstyled">
+      <? for(const link of network.filter('social')){ ?>
+        <li><a class="btn-link text-muted text-decoration-none" href="<?= link.url ?>"><?= link.title ?></a></i>
+      <? } ?>
+      </ul>
+
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
 </footer>
