@@ -18,8 +18,9 @@ a {
 }
 
 
-.post-content > p:first-child {
-  font-size: 1.5rem;
-}
 
- 
+.post-content img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 4rem;
+}

@@ -2,6 +2,7 @@
   "type": "module",
   "dependencies": {
     "commander": "^9.4.0",
+    "copy-newer": "^2.1.2",
     "ejs": "^3.1.8",
     "front-matter": "^4.0.2",
     "fs-extra": "^10.1.0",
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "watch": "nodemon --watch layouts -e ejs,css --watch  bugfix-004-generate-static.js   bugfix-004-generate-static.js",
-    "server": "http-server -c-1 dist/new-website"
+    "server": "http-server -o -c-1 dist/new-website"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

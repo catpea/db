@@ -29,18 +29,9 @@
               </div>
             </div>
             <div class="card-footer">
-
-
-              <dl class="row">
-                <dt class="col-sm-4 small">linkedPath</dt><dd class="col-sm-8 small text-warning"><?=linkedPath?></dd>
-
-              </dl>
-
-            </div>
-            <div class="card-footer">
-              <?if(get(post, linkedPath).first){?><span class="small text-muted">Viewing Latest Post</span><?}?>
-              <?if(!get(post, linkedPath).first){?><a href="/data/<?=get(post, linkedPath).next?>/<?=post.file?>" class="btn btn-sm btn-outline-info"><i class="bi bi-arrow-left-circle-fill"></i> Previous</a><?}?>
-              <a href="/data/<?=get(post, linkedPath).prev?>/<?=post.file?>" class="btn btn-sm btn-outline-info float-end">Next <i class="bi bi-arrow-right-circle-fill"></i></a>
+              <?if(post.tagger[tag].first){?><span class="small text-muted">Viewing Latest Post</span><?}?>
+              <?if(!post.tagger[tag].first){?><a href="/data/<?=post.tagger[tag].next?>" class="btn btn-sm btn-outline-info"><i class="bi bi-arrow-left-circle-fill"></i> Newer Post</a><?}?>
+              <a href="/data/<?=post.tagger[tag].prev?>" class="btn btn-sm btn-outline-info float-end">Older Post <i class="bi bi-arrow-right-circle-fill"></i></a>
             </div>
           </div>
         </div>

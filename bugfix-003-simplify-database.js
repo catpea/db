@@ -77,14 +77,8 @@ async function transportContentFile({database, name, src, dest}){
     const content = turndownService.turndown(sourceContent);
     await writeFile(targetFile, content)
   } else if( await pathExists(`${src}/content.yaml`) ){
-
-     TODO: HTML is not good here,
-    bring in a custom renderer that just does h3 and the linked image IMAGE
-
-    const file = `${src}/cache/html.html`;
-    const sourceContent = (await readFile(file)).toString();
-    //console.log(node.url);(`Convert ${file} ... ${targetFile}`);
-    const content = turndownService.turndown(sourceContent);
+    const file = `${src}/cache/markdown.md`;
+    const content = (await readFile(file)).toString();
     await writeFile(targetFile, content);
   } else if( await pathExists(`${src}/content.md`) ){
     const file = `${src}/cache/html.html`;

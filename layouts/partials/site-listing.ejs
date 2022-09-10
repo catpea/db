@@ -10,7 +10,7 @@
 
   <div class="col">
     <div class="card h-100 text-bg-dark shadow">
-      <a href="/data/<?=post.guid?>"><img src="/data/<?=post.guid?>/files/lg-<?=post.image?>" class="card-img-top" alt="..."></a>
+      <a href="/data/<?=post.guid?>/<?=post.file?>"><img src="/data/<?=post.guid?>/files/lg-<?=post.image?>" class="card-img-top" alt="..."></a>
       <div class="small text-muted mt-2">
 
       </div>
@@ -22,12 +22,13 @@
         <p class="card-text"><?= chain( post.content ).plaintext().truncate({length: 256, separator: /\W/i, 'omission': '...'}).value() -?></p>
       </div>
       <div class="card-footer">
+
         <?if(post.audio){?>
-          <a href="/data/<?=post.guid?>/files/<?=post.audio?>" class="btn btn-<?=post.last?'primary':'warning'?>"><i class="bi bi-play-circle"></i> Listen</a>
+          <a href="/data/<?=post.guid?>/files/<?=post.audio?>" class="btn btn-<?=get(post, linkedPath).first?'primary':'warning'?> position-relative"><i class="bi bi-play-circle"></i> Listen<?if(get(post, linkedPath).first){?><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light shadow">new</span><?}?></a>
         <?}?>
-        <a href="/data/<?=post.guid?>" class="btn btn<?=post.audio?'-outline':''?>-<?=post.last?'primary':'warning'?>"><i class="bi bi-eye"></i> View</a>
+        <a href="/data/<?=post.guid?>/<?=post.file?>" class="btn btn<?=post.audio?'-outline':''?>-<?=get(post, linkedPath).first?'primary':'warning'?>"><i class="bi bi-eye"></i> View</a>
         <?if(post.links?.length){?>
-         <a href="/data/<?=post.guid?>#references" title="Contains Links or References" class="btn btn-outline-info float-end"><?=post.links?.length?> Link<?=post.links?.length>1?'s':''?></a>
+         <a href="/data/<?=post.guid?>/<?=post.file?>#references" title="Contains Links or References" class="btn btn-outline-info float-end"><?=post.links?.length?> Link<?=post.links?.length>1?'s':''?></a>
         <?}?>
       </div>
     </div>
@@ -41,14 +42,14 @@
 <div class="col d-none d-xxl-flex">
 
 <div class="card h-100 text-bg-dark shadow">
-  <div class="card-body">
+  <!-- <div class="card-body">
     <h5 class="card-subtitle text-muted text-center">Summary</h5>
-  </div>
+  </div> -->
 
     <div class="row align-items-center h-100 pb-2">
       <div class="col text-center">
         <? for(const post of posts.value()){ ?>
-          <a href="/data/<?=post.guid?>"><img style="width: 25%; height:25%; margin: 2px;" src="/data/<?=post.guid?>/files/lg-<?=post.image?>" class="rounded" alt="<?-post.title?>" title="<?-post.title?>"></a>
+          <a href="/data/<?=post.guid?>/<?=post.file?>"><img style="width: 15%; height:15%; margin: 2px;" src="/data/<?=post.guid?>/files/lg-<?=post.image?>" class="rounded" alt="<?-post.title?>" title="<?-post.title?>"></a>
         <?}?>
       </div>
     </div>

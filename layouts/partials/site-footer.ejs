@@ -20,6 +20,15 @@
         <li><a class="btn-link text-muted text-decoration-none" href="<?= link.url ?>"><?= link.title ?></a></li>
       <? } ?>
       </ul>
+      <h5 class="mb-3 mb-lg-5 mt-5">
+        Tag Browser
+        <small class="text-muted">Explore Content</small>
+      </h5>
+      <ul class="list-unstyled">
+      <? for(const tag in tags){ ?>
+        <li><a class="btn-link text-muted text-decoration-none" href="/tag/<?= tag ?>"><?= tag ?></a></li>
+      <? } ?>
+      </ul>
 
 
       <span class="opacity-25 pe-1 text-muted small d-sm-none">&pi;:xs</span>
