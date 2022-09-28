@@ -17,8 +17,8 @@ furkies-purrkies
 westland-warrior
 
 
-catpea-org
-catpea-org.sh
+catpea-server
+catpea-server.sh
 
 # Ignore YouTube Video Files (video version of the mp3 files)
 *.mp4

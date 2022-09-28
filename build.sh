@@ -31,8 +31,9 @@ fi
 # rm website/docs/audio/poetry-00*.mp3
 
 
-echo "Copying data into catpea-org"
-rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./catpea-org/public
+echo "Copying data into catpea-server"
+rsync -qav --progress ./dist/furkies-purrkies/wwwroot/ ./catpea-server/www/catpea-org
+rsync -qav --progress /home/meow/Universe/Development/catpea-project/dist/website/ ./catpea-server/www/catpea-net
 
 
 # echo "Review website: hs -o -c-1 ./dist/furkies-purrkies/wwwroot/"

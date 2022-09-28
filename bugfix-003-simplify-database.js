@@ -21,10 +21,13 @@ import {remark} from 'remark'
 import {visit} from 'unist-util-visit'
 
 let crash = false;
+// const portfolio = new Set(["poem-0708","poem-0687","poem-0695","poem-0707","poem-0704","poem-0713","poem-0714","poem-0716","poem-0719","poem-0720","poem-0724","poem-0732","poem-0740","poem-0746","poem-0748","poem-0756","poem-0759","poem-0764","poem-0765","poem-0767","poem-0769","poem-0771","poem-0774","poem-0782","poem-0791","poem-0792","poem-0793","poem-0794","poem-0800","poem-0806","poem-0828","poem-0835","poem-0833","poem-0864","poem-0875","poem-0880","poem-0881","poem-0882","poem-0885","poem-0886","poem-0889","poem-0892","poem-0891","poem-0894","poem-0896","poem-0902","poem-0905","poem-0909","poem-0911"]);
+const portfolio = new Set(['poem-0687', 'poem-0695', 'poem-0704', 'poem-0707', 'poem-0708', 'poem-0713', 'poem-0714', 'poem-0716', 'poem-0719', 'poem-0720', 'poem-0724', 'poem-0732', 'poem-0740', 'poem-0746', 'poem-0748', 'poem-0756', 'poem-0759', 'poem-0764', 'poem-0765', 'poem-0767', 'poem-0769', 'poem-0771', 'poem-0774', 'poem-0782', 'poem-0789', 'poem-0791', 'poem-0792', 'poem-0793', 'poem-0794', 'poem-0800', 'poem-0806', 'poem-0822', 'poem-0828', 'poem-0832', 'poem-0833', 'poem-0835', 'poem-0864', 'poem-0875', 'poem-0880', 'poem-0881', 'poem-0882', 'poem-0885', 'poem-0886', 'poem-0889', 'poem-0891', 'poem-0892', 'poem-0894', 'poem-0896', 'poem-0902', 'poem-0905', 'poem-0909', 'poem-0911']);
+
 
 const databases = ['furkies-purrkies', 'westland-warrior'];
 
-const dest = `dist/static-port/`;
+const dest = `/home/meow/Universe/Development/catpea-project/database`;
 
 await ensureDir(dest);
 
@@ -43,7 +46,8 @@ for (const database of databases){
     await transportContentFile({database, name, src, dest})
     await updateMarkdownLinks({database, name, src, dest});
     await addFrontmatter({database, name, src, dest}, {weight});
-    // await copyAllFiles({database, name, src, dest});
+    await copyAllFiles({database, name, src, dest});
+    await copyImageFiles({database, name, src, dest});
 
     // TODO: check presence of files mentioned in metadata
 
@@ -68,7 +72,9 @@ async function transportContentFile({database, name, src, dest}){
   // //console.log(node.url);('targetBase:',targetBase);
   await ensureDir(targetBase);
   const targetFile = path.join(targetBase, 'index.md');
-  // //console.log(node.url);(`Source content has ${sourceContent.length} bytes.`);
+
+  const configurationFile = path.join(src, 'configuration.json');
+  const configurationData = await readJson(configurationFile);
 
   if( await pathExists(`${src}/content.html`) ){
     const file = `${src}/content.html`;
@@ -77,7 +83,8 @@ async function transportContentFile({database, name, src, dest}){
     const content = turndownService.turndown(sourceContent);
     await writeFile(targetFile, content)
   } else if( await pathExists(`${src}/content.yaml`) ){
-    const file = `${src}/cache/markdown.md`;
+    //const file = `${src}/cache/markdown.md`;
+    const file = `/home/meow/Universe/Development/db/dist/simple-md/${configurationData.guid}.md`;
     const content = (await readFile(file)).toString();
     await writeFile(targetFile, content);
   } else if( await pathExists(`${src}/content.md`) ){
@@ -108,13 +115,15 @@ async function addFrontmatter({database, name, src, dest}, merge){
   const recordFile = path.join(src, 'cache', 'record.json');
   const recordData = await readJson(recordFile);
 
-  if(recordData.images){
-    configurationData.images  = recordData.images.map(o=>({title:o.title, src:o.url}));
-  }
-  if(recordData.links){
-    configurationData.links  = recordData.links.map(o=>({title:o.title, url:o.url}));
-  }
-
+  // SKIPPING THESE - WILL BE RECALCULATED LATER
+  // if(recordData.images){
+  //   configurationData.images  = recordData.images.map(o=>({title:o.title, src:o.url}));
+  // }
+  // if(recordData.links){
+  //   configurationData.links  = recordData.links.map(o=>({title:o.title, url:o.url}));
+  // }
+  // SKIPPING THESE - WILL BE RECALCULATED LATER
+  configurationData.id = name;
   if(configurationData.artworks){
     configurationData.artwork = uniq([configurationData.artwork].concat(configurationData.artworks));
     delete configurationData.artworks;
@@ -150,8 +159,17 @@ async function addFrontmatter({database, name, src, dest}, merge){
     images: null, // an array of paths to images related to the page; used by internal templates such as _internal/twitter_cards.html.
     artwork: null,
     resources: null,
+    features: {},
     draft: false,
   }, configurationData, merge);
+
+
+  if(database == 'westland-warrior'){
+    frontObject.features.youtubeThumbnails=true;
+  }
+  if(portfolio.has(configurationData.id)){
+    frontObject.features.portfolioJpg=true;
+  }
 
   let omited = [];
   for (const key of Object.keys(frontObject)) {
@@ -161,12 +179,12 @@ async function addFrontmatter({database, name, src, dest}, merge){
       omited.push(key)
     }
   }
-
   const frontObjectClean = omit(frontObject, omited )
 
   let markdown = '';
   markdown += '---\n';
-  markdown += yaml.dump(frontObjectClean);
+  // markdown += yaml.dump(frontObjectClean);
+  markdown += yaml.dump(frontObject);
   markdown += '---\n';
   markdown += '\n';
   markdown += markdownData;
@@ -181,6 +199,24 @@ async function copyAllFiles({database, name, src, dest}){
   const source = path.join(src, 'files');
   const target = path.join(dest, database, name, 'files');
   if(!(await (pathExists(target)))) await copy(source, target);
+}
+
+async function copyImageFiles({database, name, src, dest}){
+  const configurationFile = path.join(src, 'configuration.json');
+  const configurationData = await readJson(configurationFile);
+
+  await copy(
+    path.join(src, 'files', configurationData.image),
+    path.join(dest, database, name, 'files', configurationData.image)
+  );
+
+  for(const size of ['sm','md','lg']){
+    await copy(
+      path.join(src, 'cache', size +'-'+ configurationData.image),
+      path.join(dest, database, name, 'files', size +'-'+ configurationData.image)
+    );
+  }
+
 }
 
 async function updateMarkdownLinks({database, name, src, dest}){

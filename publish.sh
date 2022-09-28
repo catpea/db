@@ -7,5 +7,4 @@ echo NOTE: if you are running in test mode where you forked warrior/website/etc 
 ./bin/upload-submodules/index.sh
 
 # Messy
-./catpea-org.sh
-
+./catpea-server.sh
